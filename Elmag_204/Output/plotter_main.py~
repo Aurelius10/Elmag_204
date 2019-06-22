@@ -1,0 +1,123 @@
+import numpy
+import matplotlib.pyplot as plt
+import os
+
+fold='test'
+def plot_spec_95_test(f):
+    datafile = 'spec_95_'+f
+    f = open(datafile, 'r')
+    num1 = []
+    num2 = []
+    num3 = []
+    for line in f:
+        num1.append(float(line.split()[0]))
+        num2.append(float(line.split()[1]))
+        num3.append(float(line.split()[2]))
+    f.close()
+    plt.plot(num1, num2, color='blue', label='y1')
+    plt.plot(num1, num3, color='red', label='y2')
+    plt.xscale('log')
+    plt.yscale('log')
+    plt.xlabel(r'$x$')
+    plt.ylabel(r'$y$')
+    plt.title(datafile + " New program")
+    #plt.savefig(os.getcwd() + "/pdfs/" + datafile + '_figure_old.pdf')
+    plt.show()
+
+def plot_spec_c_test(f):
+    datafile = 'spec_c_'+f
+    f = open(datafile, 'r')
+    num1 = []
+    num2 = []
+    num3 = []
+    num4 = []
+    num5 = []
+    num6 = []
+    num7 = []
+    num8 = []
+    for line in f:
+        num1.append(float(line.split()[0]))
+        num2.append(float(line.split()[1]))
+        num3.append(float(line.split()[2]))
+        num4.append(float(line.split()[3]))
+        num5.append(float(line.split()[4]))
+        num6.append(float(line.split()[5]))
+        num7.append(float(line.split()[6]))
+        num8.append(float(line.split()[7]))
+    f.close()
+    plt.plot(num1, num2, color='blue', label='y1')
+    plt.plot(num1, num3, color='red', label='y2')
+    plt.plot(num1, num4, color='green', label='y2')
+    plt.plot(num1, num5, color='orange', label='y2')
+    plt.plot(num1, num6, color='yellow', label='y2')
+    plt.plot(num1, num7, color='black', label='y2')
+    plt.plot(num1, num8, color='purple', label='y2')
+    plt.xscale('log')
+    plt.yscale('log')
+    plt.xlabel(r'$x$')
+    plt.ylabel(r'$y$')
+    plt.title(datafile + " New program")
+    #plt.savefig(os.getcwd() + "/pdfs/" + datafile + '_figure_old.pdf')
+    plt.show()
+
+def plot_spec_diff_test(f):
+    datafile = 'spec_diff_'+f
+    f = open(datafile, 'r')
+    num1 = []
+    num2 = []
+    num3 = []
+    for line in f:
+        num1.append(float(line.split()[0]))
+        num2.append(float(line.split()[1]))
+        num3.append(float(line.split()[2]))
+    f.close()
+    plt.plot(num1, num2, color='blue', label='y1')
+    plt.plot(num1, num3, color='red', label='y2')
+    plt.xscale('log')
+    plt.yscale('log')
+    plt.xlabel(r'$x$')
+    plt.ylabel(r'$y$')
+    plt.title(datafile + " New program")
+    #plt.savefig(os.getcwd() + "/pdfs/" + datafile + '_figure_old.pdf')
+    plt.show()
+
+def plot_spec_t_test(f):
+    datafile = 'spec_t_'+f
+    f = open(datafile, 'r')
+    num1 = []
+    num2 = []
+    num3 = []
+    num4 = []
+    num5 = []
+    num6 = []
+    num7 = []
+    num8 = []
+    for line in f:
+        num1.append(float(line.split()[0]))
+        num2.append(float(line.split()[1]))
+        num3.append(float(line.split()[2]))
+        num4.append(float(line.split()[3]))
+        num5.append(float(line.split()[4]))
+        num6.append(float(line.split()[5]))
+        num7.append(float(line.split()[6]))
+        num8.append(float(line.split()[7]))
+    f.close()
+    plt.plot(num1, num2, color='blue', label='y1')
+    plt.plot(num1, num3, color='red', label='y2')
+    plt.plot(num1, num4, color='green', label='y2')
+    plt.plot(num1, num5, color='orange', label='y2')
+    plt.plot(num1, num6, color='yellow', label='y2')
+    plt.plot(num1, num7, color='black', label='y2')
+    plt.plot(num1, num8, color='purple', label='y2')
+    plt.xscale('log')
+    plt.yscale('log')
+    plt.xlabel(r'$x$')
+    plt.ylabel(r'$y$')
+    plt.title(datafile + " New program")
+    #plt.savefig(os.getcwd() + "/pdfs/" + datafile + '_figure_old.pdf')
+    plt.show()
+
+plot_spec_95_test(fold)
+plot_spec_c_test(fold)
+plot_spec_diff_test(fold)
+plot_spec_t_test(fold)
